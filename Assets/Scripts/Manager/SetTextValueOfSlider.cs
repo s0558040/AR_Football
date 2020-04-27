@@ -3,6 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/**
+ * @author Stefan Manthey
+ * Script to display the force to kick the ball
+ * The script is deprecated and no longer being used
+ */
 public class SetTextValueOfSlider : MonoBehaviour
 {
     public Slider slider;

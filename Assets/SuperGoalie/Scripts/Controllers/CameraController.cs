@@ -5,6 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
 
+/**
+ * Foreign code from SuperGoalie(Basic)
+ * Source: https://assetstore.unity.com/packages/templates/packs/super-goalie-basic-144535
+ * Script was now used in the AR_Football project
+ */
 namespace Assets.SoccerGameEngine_Basic_.Scripts.Controllers
 {
     public class CameraController : MonoBehaviour

@@ -3,13 +3,17 @@ using System.Collections.Generic;
 using Assets.SuperGoalie.Scripts.Entities;
 using UnityEngine;
 
+/**
+ * @author Stefan Manthey
+ * Script to control the behavior of the goalkeeper
+ */
 public class GoalKeeperController : MonoBehaviour
 {
-    private StateManager _stateManager;
-    private Vector3 _origin;
-    private bool _isWalking = false;
-    private float _turn;
-    private float _height;
+    private StateManager _stateManager;     // animation state manager to control the animations (and translation)
+    private Vector3 _origin;                // origin position of the goalkeeper
+    private bool _isWalking = false;        // to check if the goalkeeper is already walking
+    private float _turn;                    // direction (left and right) for the walking and jumping animation
+    private float _height;                  // height (and intensity) for the jumping animation
     
     public BallController ball;
     public Transform keeperModel;
@@ -22,12 +26,19 @@ public class GoalKeeperController : MonoBehaviour
 
     private void Update()
     {
+        // only starts walking animation cicle if the ball is launched and the goalkeeper
+        // isn't already beeing walking
         if (ball.IsLaunched() && !_isWalking)
         {
             StartWalking();
         }
     }
 
+    /**
+     * Starts animation (and translation) cicle of the goalkeeper
+     * Direction and height to jump will be set randomly
+     * Every animation state of the animation cicle will be invoked for a second
+     */
     private void StartWalking()
     {
         _isWalking = true;
@@ -36,11 +47,18 @@ public class GoalKeeperController : MonoBehaviour
         InvokeRepeating("NextAnimationState", 0.0F, 1.0F);
     }
 
+    /**
+     * Activates the next animation state of the goalkeeper
+     */
     private void NextAnimationState()
     {
         _stateManager.NextState();
     }
 
+    /**
+     * Resets the goalkeeper to his origin position and set the animation
+     * of the goalkeeper back to idle
+     */
     public void ResetGoalKeeper()
     {
         if (IsInvoking("NextAnimationState"))

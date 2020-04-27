@@ -3,6 +3,11 @@ using Assets.SuperGoalie.Scripts.FSMs;
 using System;
 using UnityEngine;
 
+/**
+ * Foreign code from SuperGoalie(Basic)
+ * Source: https://assetstore.unity.com/packages/templates/packs/super-goalie-basic-144535
+ * Script was now used in the AR_Football project
+ */
 namespace Assets.SuperGoalie.Scripts.Entities
 {
     [RequireComponent(typeof(GoalKeeperFSM))]

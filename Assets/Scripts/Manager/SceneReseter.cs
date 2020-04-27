@@ -2,7 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// Eigener Code
+/**
+ * @author Stefan Manthey
+ * Script to reset all relevant entities in the scene
+ */
 public class SceneReseter : MonoBehaviour
 {
     public BallController ballController;

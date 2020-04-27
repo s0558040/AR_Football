@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-// Eigener Code
+/**
+ * @author Stefan Manthey
+ * Script to count the goals that were shot
+ */
 public class GoalCounter : MonoBehaviour
 {
-    public Text scoreText;
+    public Text scoreText;      // text of a label that displays the current score
     public int score = 0;
 
     // Start is called before the first frame update
@@ -15,6 +18,9 @@ public class GoalCounter : MonoBehaviour
         scoreText.text = string.Format("{0} Tore", score);
     }
 
+    /**
+     * The score will be iteratively increase
+     */
     public void ShotGoal()
     {
         scoreText.text = string.Format("{0} Tore", ++score);

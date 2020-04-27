@@ -2,17 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// Eigener Code
+/**
+ * @author Stefan Manthey
+ * Script to control the behavior of the ball
+ */
 public class BallController : MonoBehaviour
 {
-    private Rigidbody _myRigidBody;
-    private Transform _ball;
-    private Vector3 _origin;
-    private AudioSource _audioSource;
-    private bool _isShot = false;
+    private Rigidbody _myRigidBody;         // rigidbody component of the ball gameobject
+    private Transform _ball;                // transform component of the ball gameobject
+    private Vector3 _origin;                // used to save the origin position of the ball
+    private AudioSource _audioSource;       // audio source to play a kick sound when the ball was kicked
+    private bool _isShot = false;           // to check if the ball was already kicked
 
-    private float force = 1.0F;
-    public float gravity = 9.0F;
+    private float force = 1.0F;             // force value to kick the ball
+    public float gravity = 9.0F;            // gravity that is used in the scene
     public float Force
     {
         get
@@ -25,30 +28,6 @@ public class BallController : MonoBehaviour
         }
     }
 
-    public Vector3 Position
-    {
-        get
-        {
-            return _ball.localPosition;
-        }
-        set
-        {
-            _ball.localPosition = value;
-        }
-    }
-
-    public Quaternion Rotation
-    {
-        get
-        {
-            return _ball.rotation;
-        }
-        set
-        {
-            _ball.rotation = value;
-        }
-    }
-
     private void Start()
     {
         _ball = GetComponent<Transform>();
@@ -58,6 +37,10 @@ public class BallController : MonoBehaviour
         Physics.gravity = new Vector3(0.0F, -gravity, 0.0F);
     }
 
+    /**
+     * Sets the position of the ball back to the origin position
+     * All velocity force will be set to zero
+     */
     private void ResetPosition()
     {
         _ball.localPosition = _origin;
@@ -65,6 +48,11 @@ public class BallController : MonoBehaviour
         _myRigidBody.angularVelocity = Vector3.zero;
     }
 
+    /**
+     * Kicks the ball with the set force in the current direction
+     * and plays an audio clip
+     * It also activates the gravity
+     */
     public void LaunchBall()
     {
         if (!_isShot)
@@ -76,11 +64,17 @@ public class BallController : MonoBehaviour
         }
     }
     
+    /**
+     * Checks if the ball was already kicked
+     */
     public bool IsLaunched()
     {
         return _isShot;
     }
 
+    /**
+     * Resets the position of the ball to the origin point and deactivates the gravity
+     */
     public void ResetBall()
     {
         _isShot = false;

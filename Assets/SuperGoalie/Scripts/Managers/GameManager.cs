@@ -6,6 +6,11 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
+/**
+ * Foreign code from SuperGoalie(Basic)
+ * Source: https://assetstore.unity.com/packages/templates/packs/super-goalie-basic-144535
+ * Script was now used in the AR_Football project
+ */
 namespace Assets.SuperGoalie.Scripts.Managers
 {
     public class GameManager : Singleton<GameManager>

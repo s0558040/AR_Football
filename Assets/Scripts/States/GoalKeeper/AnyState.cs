@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/**
+ * @author Stefan Manthey
+ * Script to 
+ */
 public class AnyState : MonoBehaviour, IKeeper
 {
     private Animator _anim;
