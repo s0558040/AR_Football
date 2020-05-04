@@ -38,8 +38,8 @@ public class BallController : MonoBehaviour
     }
 
     /**
-     * Sets the position of the ball back to the origin position
-     * All velocity force will be set to zero
+     * <summary>Sets the position of the ball back to the origin position.
+     * All velocity force will be set to zero</summary>
      */
     private void ResetPosition()
     {
@@ -49,9 +49,9 @@ public class BallController : MonoBehaviour
     }
 
     /**
-     * Kicks the ball with the set force in the current direction
-     * and plays an audio clip
-     * It also activates the gravity
+     * <summary>Kicks the ball with the set force in the current direction.
+     * and plays an audio clip.
+     * It also activates the gravity</summary>
      */
     public void LaunchBall()
     {
@@ -63,9 +63,9 @@ public class BallController : MonoBehaviour
             _audioSource.Play();
         }
     }
-    
+
     /**
-     * Checks if the ball was already kicked
+     * <summary>Checks if the ball was already kicked</summary>
      */
     public bool IsLaunched()
     {
@@ -73,7 +73,7 @@ public class BallController : MonoBehaviour
     }
 
     /**
-     * Resets the position of the ball to the origin point and deactivates the gravity
+     * <summary>Resets the position of the ball to the origin point and deactivates the gravity</summary>
      */
     public void ResetBall()
     {

@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/**
+ * @author Stefan Manthey
+ * Script for TendGoal animation behaviour
+ */
 public class TendGoal : MonoBehaviour, IKeeper
 {
     private Animator _anim;

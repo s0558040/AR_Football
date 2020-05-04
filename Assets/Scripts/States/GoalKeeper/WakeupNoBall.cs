@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/**
+ * @author Stefan Manthey
+ * Script for WakeupNoBall animation behaviour
+ */
 public class WakeupNoBall : MonoBehaviour, IKeeper
 {
     private Animator _anim;

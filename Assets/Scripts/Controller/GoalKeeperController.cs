@@ -35,9 +35,9 @@ public class GoalKeeperController : MonoBehaviour
     }
 
     /**
-     * Starts animation (and translation) cicle of the goalkeeper
+     * <summary>Starts animation (and translation) cicle of the goalkeeper
      * Direction and height to jump will be set randomly
-     * Every animation state of the animation cicle will be invoked for a second
+     * Every animation state of the animation cicle will be invoked for a second</summary>
      */
     private void StartWalking()
     {
@@ -48,7 +48,7 @@ public class GoalKeeperController : MonoBehaviour
     }
 
     /**
-     * Activates the next animation state of the goalkeeper
+     * <summary>Activates the next animation state of the goalkeeper</summary>
      */
     private void NextAnimationState()
     {
@@ -56,8 +56,8 @@ public class GoalKeeperController : MonoBehaviour
     }
 
     /**
-     * Resets the goalkeeper to his origin position and set the animation
-     * of the goalkeeper back to idle
+     * <summary>Resets the goalkeeper to his origin position and set the animation
+     * of the goalkeeper back to idle</summary>
      */
     public void ResetGoalKeeper()
     {

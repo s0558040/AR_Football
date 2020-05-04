@@ -52,7 +52,7 @@ public class ArrowController : MonoBehaviour
     }
 
     /**
-     * Sets the mesh renderer of the arrow to in-/visible
+     * <summary>Sets the mesh renderer of the arrow to in-/visible</summary>
      * <param name="state">true, the arrow will be rendered</param>
      */
     public void SwitchRenderer(bool state)
@@ -61,7 +61,7 @@ public class ArrowController : MonoBehaviour
     }
 
     /**
-     * Resets the Arrow and sets the mesh renderer to visible
+     * <summary>Resets the Arrow and sets the mesh renderer to visible</summary>
      */
     public void ResetArrow()
     {
@@ -70,7 +70,7 @@ public class ArrowController : MonoBehaviour
     }
 
     /**
-     * Rotates the arrow gameobject and sets the angle of the ball to the same angle of the arrow
+     * <summary>Rotates the arrow gameobject and sets the angle of the ball to the same angle of the arrow</summary>
      */
     private void RotateArrow()
     {

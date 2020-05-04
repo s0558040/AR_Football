@@ -4,7 +4,7 @@ using UnityEngine;
 
 /**
  * @author Stefan Manthey
- * Script to 
+ * Script for the AnyState animation behaviour
  */
 public class AnyState : MonoBehaviour, IKeeper
 {

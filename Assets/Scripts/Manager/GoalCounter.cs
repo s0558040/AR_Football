@@ -19,7 +19,7 @@ public class GoalCounter : MonoBehaviour
     }
 
     /**
-     * The score will be iteratively increase
+     * <summary>The score will be iteratively increase</summary>
      */
     public void ShotGoal()
     {

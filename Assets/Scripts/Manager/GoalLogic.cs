@@ -16,9 +16,9 @@ public class GoalLogic : MonoBehaviour
     public AudioSource goalSound;
 
     /**
-     * When an gameobject with the tag "Ball" hits the goal collider (trigger),
+     * <summary>When an gameobject with the tag "Ball" hits the goal collider (trigger),
      * the goal counter will be increased, the goal sound will be played and
-     * the scene will be reseted after 2.5 secounds.
+     * the scene will be reseted after 2.5 secounds.</summary>
      * <param name="other">object that collided with the trigger</param>
      */
     void OnTriggerEnter(Collider other)
@@ -33,7 +33,7 @@ public class GoalLogic : MonoBehaviour
     }
 
     /**
-     * Resets the scene
+     * <summary>Resets the scene</summary>
      */
     void Reset()
     {

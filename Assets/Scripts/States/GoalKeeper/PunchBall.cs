@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/**
+ * @author Stefan Manthey
+ * Script for PunchBall animation behaviour
+ */
 public class PunchBall : MonoBehaviour, IKeeper
 {
     private Animator _anim;

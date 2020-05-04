@@ -18,7 +18,7 @@ public class SetForceToBall : MonoBehaviour
     }
 
     /**
-     * Sets the force to kick the ball from the current slider value
+     * <summary>Sets the force to kick the ball from the current slider value</summary>
      */
     public void SetForce()
     {

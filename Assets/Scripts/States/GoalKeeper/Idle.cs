@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/**
+ * @author Stefan Manthey
+ * Script for the Idle animation behaviour
+ */
 public class Idle : MonoBehaviour, IKeeper
 {
     private Animator _anim;
