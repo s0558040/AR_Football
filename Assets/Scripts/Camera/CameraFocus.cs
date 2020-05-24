@@ -4,23 +4,26 @@ using UnityEngine;
 using Vuforia;
 
 /**
- * Foreign Code
+ * @author Stefan Manthey
+ * Heavily inspired from
  * Source: https://library.vuforia.com/content/vuforia-library/en/articles/Solution/Working-with-the-Camera.html
- * Script to set camera focus mode to continuous auto
+ * Script let user switch the camera focus mode
  */
 public class CameraFocus : MonoBehaviour
 {
+    private CameraDevice.FocusMode _mode;
     void Start()
     {
         VuforiaARController vuforia = VuforiaARController.Instance;
         vuforia.RegisterVuforiaStartedCallback(OnVuforiaStarted);
         vuforia.RegisterOnPauseCallback(OnPaused);
+
+        _mode = CameraDevice.FocusMode.FOCUS_MODE_NORMAL;
     }
 
     private void OnVuforiaStarted()
     {
-        CameraDevice.Instance.SetFocusMode(
-            CameraDevice.FocusMode.FOCUS_MODE_CONTINUOUSAUTO);
+        CameraDevice.Instance.SetFocusMode(_mode);
     }
 
     private void OnPaused(bool paused)
@@ -28,8 +31,27 @@ public class CameraFocus : MonoBehaviour
         if (!paused) // resumed
         {
             // Set again autofocus mode when app is resumed
-            CameraDevice.Instance.SetFocusMode(
-                CameraDevice.FocusMode.FOCUS_MODE_CONTINUOUSAUTO);
+            CameraDevice.Instance.SetFocusMode(_mode);
         }
+    }
+
+    public void SetModeToNormal()
+    {
+        _mode = CameraDevice.FocusMode.FOCUS_MODE_NORMAL;
+    }
+
+    public void SetModeToContinuousAuto()
+    {
+        _mode = CameraDevice.FocusMode.FOCUS_MODE_CONTINUOUSAUTO;
+    }
+
+    public void SetModeToMacro()
+    {
+        _mode = CameraDevice.FocusMode.FOCUS_MODE_MACRO;
+    }
+
+    public void SetModeToInfinity()
+    {
+        _mode = CameraDevice.FocusMode.FOCUS_MODE_INFINITY;
     }
 }
