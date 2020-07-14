@@ -9,7 +9,7 @@
     }
   ],
   "dependencies": {
-    "com.ptc.vuforia.engine": "9.1.7",
+    "com.ptc.vuforia.engine": "9.2.8",
     "com.unity.ads": "2.0.8",
     "com.unity.analytics": "3.3.2",
     "com.unity.collab-proxy": "1.2.16",
